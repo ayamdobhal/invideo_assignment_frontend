@@ -1,36 +1,37 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# invideo_assignment_frontend
 
-## Getting Started
+The frontend repository for Invideo Assignment. Built using Next.JS.
+The UI has two tabs:
 
-First, run the development server:
+1. A calculator that evaluates expressions using the [WebAssembly Bindings](https://github.com/ayamdobhal/invideo-assignment-wasm), the bindings are also included as a submodule.
+2. A Shader Editor where the user can prompt for a GLSL shader and the code is fetched from `gemini-1.5-flash` model and is previewed as well.
+
+## Set up
+
+1. Clone the Repository
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone https://github.com/ayamdobhal/invideo_assignment_frontend
+cd invideo_assignment_frontend
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install the dependencies
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+pnpm install
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+3. Set up the Environment
 
-## Learn More
+```bash
+cp .env.example .env
+```
 
-To learn more about Next.js, take a look at the following resources:
+5. Clone and run the backend server from [here](https://github.com/ayamdobhal/invideo_assignment_backend)
+6. Run the development server
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+```bash
+pnpm run dev
+```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+The server can then be accessed at: [http://localhost:3000](https://localhost:3000)
