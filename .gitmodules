@@ -1,0 +1,3 @@
+[submodule "wasm-code"]
+	path = wasm-code
+	url = https://github.com/ayamdobhal/invideo-assignment-wasm
